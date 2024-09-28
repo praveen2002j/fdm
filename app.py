@@ -119,12 +119,13 @@ elif selected_option == "Make Prediction":
     # Apply scaling (use the same scaler as used in training)
     input_data_scaled = scaler.transform(input_data)
 
-    # Perform the prediction
+    # #Perform the prediction
     if st.button("Predict Satisfaction"):
         if selected_model == "CatBoost":
             prediction = model_catboost.predict(input_data_scaled)
         else:
             prediction = model_lightgbm.predict(input_data_scaled)
 
-        # Display the result
+       
+     # Display the result
         st.write(f"Prediction: {'Satisfied' if prediction[0] == 1 else 'Not Satisfied'}")
