@@ -40,6 +40,7 @@ X_test_scaled = scaler.transform(X_test)
 if selected_option == "View Data":
     st.subheader("Dataset: Airline Passenger Satisfaction")
     
+    st.image('https://w7.pngwing.com/pngs/902/845/png-transparent-airplane-aircraft-flight-airplane-mode-of-transport-flight-airplane-thumbnail.png', use_column_width=True, caption='See the passenger satisfaction')
     # Display data
     st.write(data.head())
 
@@ -63,9 +64,9 @@ elif selected_option == "Make Prediction":
     st.sidebar.subheader("Input Features")
     gender = st.sidebar.selectbox("Gender (0: Female, 1: Male)", [0, 1])
     age = st.sidebar.slider("Age", 18, 80, 30)
-    customer_type = st.sidebar.selectbox("Customer Type (0: Regular, 1: Loyal)", [0, 1])
+    customer_type = st.sidebar.selectbox("Customer Type (0: First Time, 1: Returning)", [0, 1])
     travel_type = st.sidebar.selectbox("Travel Type (0: Personal, 1: Business)", [0, 1])
-    flight_class = st.sidebar.selectbox("Class (0: Economy, 1: Business)", [0, 1])
+    flight_class = st.sidebar.selectbox("Class (0: Business, 1: Economy, 2: Economy Plus)", [0, 1, 2])
     distance = st.sidebar.slider("Flight Distance", 0, 5000, 1000)
     departure_delay_minutes = st.sidebar.slider("Departure Delay Minutes", 0, 180, 0)
     arrival_delay_minutes = st.sidebar.slider("Arrival Delay Minutes", 0, 180, 0)
