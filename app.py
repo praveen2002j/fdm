@@ -40,7 +40,7 @@ X_test_scaled = scaler.transform(X_test)
 if selected_option == "View Data":
     st.subheader("Dataset: Airline Passenger Satisfaction")
     
-    st.image('https://w7.pngwing.com/pngs/902/845/png-transparent-airplane-aircraft-flight-airplane-mode-of-transport-flight-airplane-thumbnail.png', use_column_width=True, caption='See the passenger satisfaction')
+    st.image('https://img.freepik.com/free-photo/jumbo-jet-flying-sky_23-2150895681.jpg', use_column_width=True, caption='See the passenger satisfaction')
     # Display data
     st.write(data.head())
 
@@ -129,4 +129,5 @@ elif selected_option == "Make Prediction":
 
        
      # Display the result
-        st.write(f"Prediction: {'Satisfied' if prediction[0] == 1 else 'Not Satisfied'}")
+        st.markdown(f"<p style='color:yellow; font-size:24px; font-weight:bold;'>Prediction: {'Satisfied' if prediction[0] == 1 else 'Not Satisfied'}</p>", unsafe_allow_html=True)
+
